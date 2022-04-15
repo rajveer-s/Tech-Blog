@@ -11,9 +11,7 @@ router.get('/', async (req, res) => {
           model: User,
           attributes: ['name'],
         },
-      ],
-      include: [
-        {
+         {
           model: Comment,
           attributes: ['comment_data'],
         },
@@ -24,9 +22,10 @@ router.get('/', async (req, res) => {
     const posts = postData.map((post) => post.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      posts, 
-      logged_in: req.session.logged_in 
+    res.render('homepage', {
+      posts,
+      name: req.session.name,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -39,7 +38,7 @@ router.get('/post/:id', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['name'],
+          attributes: ['username'],
         },
       ],
       include: [
@@ -54,7 +53,8 @@ router.get('/post/:id', async (req, res) => {
 
     res.render('project', {
       ...post,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
+      name: req.session.name
     });
   } catch (err) {
     res.status(500).json(err);
@@ -73,6 +73,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
 
     res.render('dashboard', {
       ...post,
+      name: req.session.name,
       logged_in: true
     });
   } catch (err) {
@@ -83,7 +84,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/homepage');
+    res.redirect('login');
     return;
   }
 
@@ -91,7 +92,7 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/signup', (req, res) => {
-  if (req.session.logged_in) {
+  if (req.session.logged_in) {           
     res.redirect('/homepage');
     return;
   }
