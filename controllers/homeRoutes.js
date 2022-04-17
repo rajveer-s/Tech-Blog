@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
           model: User,
           attributes: ['name'],
         },
-         {
+        {
           model: Comment,
           attributes: ['comment_data'],
         },
@@ -32,26 +32,31 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/post/:id', async (req, res) => {
+router.get('/posts/:id', withAuth, async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
+      where: {
+        id: req.params.id,
+      },
       include: [
         {
           model: User,
-          attributes: ['username'],
+          attributes: ['name'],
         },
-      ],
-      include: [
         {
           model: Comment,
-          attributes: ['comment_data'],
+          attributes: ['comment_data', 'user_id', 'post_id'],
+          include: {
+            model: User,
+            attributes: ['name']
+          }
         },
       ],
     });
 
     const post = postData.get({ plain: true });
 
-    res.render('project', {
+    res.render('eachpost', {
       ...post,
       logged_in: req.session.logged_in,
       name: req.session.name
@@ -61,30 +66,10 @@ router.get('/post/:id', async (req, res) => {
   }
 });
 
-// Use withAuth middleware to prevent access to route
-router.get('/dashboard', withAuth, async (req, res) => {
-  try {
-    // Find the logged in user based on the session ID
-    const postData = await Post.findByPk(req.session.post_id, {
-      include: [{ model: Comment }],
-    });
-
-    const post = postData.get({ plain: true });
-
-    res.render('dashboard', {
-      ...post,
-      name: req.session.name,
-      logged_in: true
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('login');
+    res.redirect('/');
     return;
   }
 
@@ -92,11 +77,6 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/signup', (req, res) => {
-  if (req.session.logged_in) {           
-    res.redirect('/homepage');
-    return;
-  }
-
   res.render('signup');
 });
 

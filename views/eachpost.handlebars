@@ -1,0 +1,38 @@
+<div class="card-group">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title postedby">{{title}} <span>Posted by: {{user.name}} on {{format_time
+          date_created}}</span></h5>
+      <p class="card-text">{{content}}</p>
+    </div>
+  </div>
+</div>
+
+<h2>Comments:</h2>
+
+{{#each comments}}
+
+<div class="card-group">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">comment by: {{user.name}} on {{format_time
+          date_created}}</h5>
+      <h3 class="card-text">{{comment_data}}</h3>
+    </div>
+  </div>
+</div>
+
+{{/each}}
+
+<form id="commentform">
+  <div class="form-group pb-3">
+    <label for="comment">Comment</label>
+    <textarea type="text" class="form-control" id="commentText" placeholder="Enter your comment here"></textarea>
+  </div>
+  <button type="submit" class="btn btn-dark">Submit</button>
+</form>
+
+
+
+{{!-- show comments here --}}
+<script src="/js/comment.js"></script>

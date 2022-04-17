@@ -4,10 +4,11 @@
 <div class="card-group">
   <div class="card">
     <div class="card-body">
-            <h5 class="card-title postedby">{{p.title}} <span>posted by: {{p.user.name}}</span></h5>
+      <h5 class="card-title postedby">{{p.title}} <span>Posted by: {{p.user.name}} on {{format_time
+          p.date_created}}</span></h5>
       <p class="card-text">{{p.content}}</p>
     </div>
-    <a href="/" id="viewComment" class="btn btn-$indigo">Go to Comments</a>
+    <a href="/posts/{{p.id}}" id="viewComment" class="btn btn-$indigo">Go to Comments</a>
   </div>
 </div>
 {{/each}}
@@ -16,7 +17,8 @@
 <div class="card-group">
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title postedby">{{p.title}} <span>posted by: {{p.user.name}}</span></h5>
+      <h5 class="card-title postedby">{{p.title}} <span>Posted by: {{p.user.name}} on {{format_time
+          p.date_created}}</span></h5>
       <p class="card-text">{{p.content}}</p>
     </div>
   </div>
