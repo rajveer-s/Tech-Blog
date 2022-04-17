@@ -7,8 +7,12 @@
 body {
   text-decoration: none;
   list-style: none;
+  background-color: #121313;
+  color: white;
 }
-
+h2 {
+  margin-top: 4rem;
+}
 .nav-link {
   font-size: 1.5rem;
   color: white;
@@ -33,6 +37,7 @@ h5.card-title {
 .postedby{
   display: flex;
   justify-content: space-between;
+  border-radius: 10px;
 }
 
 /* login and signup box  */
@@ -115,4 +120,42 @@ h5.card-title {
 
 .wrapper a:hover {
   color: #8ad8ff
+}
+
+#subbtn {
+  padding: 20px;
+  font-weight: 500;
+  background-color: rgb(201, 0, 0);
+}
+
+#commentbox{
+  margin-top: 2rem;
+  font-size: 1.6rem;
+}
+
+.card{
+  border: none;
+  background-color: #121313;
+}
+
+.card-body {
+background-color: #000000;
+color: white;
+border-radius: 15px;
+}
+
+#commenttitle h5 {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+#viewComment {
+  margin-top: .5rem;
+  background-color: rgb(114, 31, 49);
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  width: 10vw;
 }
