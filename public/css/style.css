@@ -11,6 +11,10 @@ body {
   color: white;
 }
 
+a{
+  text-decoration: none;
+}
+
 h2 {
   margin-top: 4rem;
 }

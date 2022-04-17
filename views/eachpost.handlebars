@@ -1,3 +1,4 @@
+{{#if logged_in}}
 <div class="card-group">
   <div class="card">
     <div class="card-body">
@@ -26,12 +27,37 @@
 <form id="commentform">
   <div class="form-group pb-3">
     <label for="comment" id="commentbox">Enter comment below:</label>
-    <textarea type="text" class="form-control" id="commentText" placeholder="Enter your comment here"></textarea>
+    <textarea type="text" class="form-control" id="commentText" placeholder="Enter your comment here"
+      required></textarea>
   </div>
   <button type="submit" class="btn btn-dark" id="subbtn">Submit</button>
 </form>
+{{else}}
+<div class="card-group">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title postedby">{{title}} <span>Posted by: {{user.name}} on {{format_time
+          date_created}}</span></h5>
+      <h5 class="card-text">{{content}}</h5>
+    </div>
+  </div>
+</div>
+
+<h2>Comments:</h2>
+
+{{#each comments}}
+
+<div class="card-group">
+  <div class="card">
+    <div class="card-body" id="commenttitle">
+      <h5 class="card-title">Comment by: {{user.name}}</h5>
+      <h4 class="card-text">{{comment_data}}</h4>
+    </div>
+  </div>
+</div>
+{{/each}}
+<a href="/login" id="viewComment" class="btn btn-$indigo">Make a Comment</a>
+{{/if}}
 
 
-
-{{!-- show comments here --}}
 <script src="/js/comment.js"></script>
