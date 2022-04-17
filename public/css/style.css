@@ -188,3 +188,30 @@ h5.card-title {
   color: white;
   width: 10vw;
 }
+
+label small {
+  color: #999;
+  font-weight: normal;
+}
+
+.container1 {
+  height: 80vh;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+#createpostbtn {
+  border: 2px rgb(33, 123, 139) solid;
+  color: white;
+  width: 20vw;
+}
+
+#createpostbtn a{
+  font-size: 1.5rem;
+  color: white;
+}

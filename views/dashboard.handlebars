@@ -1,0 +1,19 @@
+<div class="row">
+
+  <button type="submit" id="createpostbtn" class="btn btn-dark m-3"><a href="dashboard/makeanewpost">Make a new
+      Post</a></button>
+</div>
+
+{{#each posts as |p|}}
+<div class="card-group">
+  <div class="card">
+    <div class="card-body">
+      <a href="#">
+        <h5 class="card-title eachtitle">{{p.title}} <span>{{format_time
+            date_created}}</span></h5>
+      </a>
+      <h5 class="card-text">{{p.content}}</h5>
+    </div>
+  </div>
+</div>
+{{/each}}
