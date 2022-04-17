@@ -5,12 +5,14 @@
   <div class="card">
     <div class="card-body">
       <a href="/posts/{{p.id}}">
-        <h5 class="card-title postedby">{{p.title}} <span>Posted by: {{p.user.name}} on {{format_time
-            p.date_created}}</span></h5>
+        <h5 class="card-title postedby" data-text="Click here if you would like to Go to Comments">{{p.title}}
+          <span>Posted by: {{p.user.name}} on
+            {{format_time
+            p.date_created}}</span>
+        </h5>
       </a>
       <p class="card-text">{{p.content}}</p>
     </div>
-    <a href="/posts/{{p.id}}" id="viewComment" class="btn btn-$indigo">Go to Comments</a>
   </div>
 </div>
 {{/each}}
@@ -20,12 +22,14 @@
   <div class="card">
     <div class="card-body">
       <a href="/posts/{{p.id}}">
-        <h5 class="card-title postedby">{{p.title}} <span>Posted by: {{p.user.name}} on {{format_time
-            p.date_created}}</span></h5>
+        <h5 class="card-title postedby" data-text="Click here if you would like to Go to Comments">{{p.title}}
+          <span>Posted by: {{p.user.name}} on
+            {{format_time
+            p.date_created}}</span>
+        </h5>
       </a>
       <p class="card-text">{{p.content}}</p>
     </div>
-    <a href="/posts/{{p.id}}" id="viewComment" class="btn btn-$indigo">Go to Comments</a>
   </div>
 </div>
 {{/each}}
