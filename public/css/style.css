@@ -10,13 +10,18 @@ body {
   background-color: #121313;
   color: white;
 }
+
 h2 {
   margin-top: 4rem;
 }
+
 .nav-link {
   font-size: 1.5rem;
   color: white;
-  padding-right: 3em;
+  padding: 0 1em;
+  border: 3px solid firebrick;
+  border-radius: 14px;
+  margin-right: 1rem;
 }
 
 .nav-link:hover {
@@ -34,7 +39,7 @@ h5.card-title {
   color: white;
 }
 
-.postedby{
+.postedby {
   display: flex;
   justify-content: space-between;
   border-radius: 10px;
@@ -128,20 +133,21 @@ h5.card-title {
   background-color: rgb(201, 0, 0);
 }
 
-#commentbox{
+#commentbox {
   margin-top: 2rem;
   font-size: 1.6rem;
 }
 
-.card{
+.card {
   border: none;
   background-color: #121313;
 }
 
 .card-body {
-background-color: #000000;
-color: white;
-border-radius: 15px;
+  background-color: #000000;
+  color: white;
+  border-radius: 15px;
+  border: 3px solid firebrick;
 }
 
 #commenttitle h5 {
