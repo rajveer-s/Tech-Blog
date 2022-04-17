@@ -18,8 +18,10 @@ router.get('/', async (req, res) => {
 // GET comment by id
 router.get('/:id', async (req, res) => {
   try {
-    const commentData = await Comment.findByPk({
-      attributes: ['id', 'comment_data', 'user_id', 'post_id'],
+    const commentData = await Comment.findAll({
+      where: {
+        id: req.params.id
+      }
     });
     res.status(200).json(commentData);
   } catch (err) {
