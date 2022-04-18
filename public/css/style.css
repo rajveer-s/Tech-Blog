@@ -215,3 +215,11 @@ label small {
   font-size: 1.5rem;
   color: white;
 }
+
+#welcomeText {
+  text-align: center;
+  font-style: italic;
+  font-size: 4rem;
+  font-weight: 400;
+  width: 60vw;
+}
