@@ -54,7 +54,7 @@ router.post('/', withAuth, async (req, res) => {
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const itemData = await Item.destroy({
+    const itemData = await Post.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
@@ -62,7 +62,7 @@ router.delete('/:id', withAuth, async (req, res) => {
     });
 
     if (!itemData) {
-      res.status(404).json({ message: 'No Item found with this id!' });
+      res.status(404).json({ message: 'No Post found with this id!' });
       return;
     }
 
