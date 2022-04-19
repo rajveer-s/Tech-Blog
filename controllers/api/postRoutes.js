@@ -39,12 +39,12 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', withAuth, async (req, res) => {
   try {
-    const newitem = await Post.create({
+    const postData = await Post.create({
       ...req.body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newitem);
+    res.status(200).json(postData);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -54,19 +54,18 @@ router.post('/', withAuth, async (req, res) => {
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const itemData = await Post.destroy({
+    const postData = await Post.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
       },
     });
 
-    if (!itemData) {
+    if (!postData) {
       res.status(404).json({ message: 'No Post found with this id!' });
       return;
     }
 
-    res.status(200).json(itemData);
+    res.status(200).json(postData);
   } catch (err) {
     res.status(500).json(err);
   }
