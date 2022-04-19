@@ -6,7 +6,7 @@
 ---
 
 ## Description
-#### Coming soon ... 
+#### It's a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. This app follows the MVC paradigm in its architectural structure, using Handlebars.js as the templating language. Make sure to visit the deployed link, start your own blog post or comment on previously posted blogs.
 
 ## Table of Contents:
   - [Description](#description)
@@ -46,7 +46,7 @@ node server.js
 ## Links:
 
 - [Github Link](https://github.com/rajveer-s/Tech-blog)
-- [Deployed link]()
+- [Deployed link](https://protected-coast-45527.herokuapp.com/)
 
 ---
 
