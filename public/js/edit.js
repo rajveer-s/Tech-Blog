@@ -22,7 +22,7 @@ async function editForm(event) {
   });
 
   if (response.ok) {
-    document.location.replace('/dashboard/');
+    document.location.replace('/dashboard');
   } else {
     alert(response.statusText);
   }
@@ -48,7 +48,7 @@ async function deleteForm(event) {
   });
 
   if (response.ok) {
-    document.location.replace('/dashboard/');
+    document.location.replace('/dashboard');
   } else {
     alert(response.statusText);
   }
