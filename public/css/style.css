@@ -211,7 +211,7 @@ label small {
   width: 20vw;
 }
 
-#createpostbtn a{
+#createpostbtn a {
   font-size: 1.5rem;
   color: white;
 }
@@ -222,4 +222,13 @@ label small {
   font-size: 4rem;
   font-weight: 400;
   width: 60vw;
+}
+
+#editPost,
+#deletePost {
+  padding: 12px;
+  background-color: black;
+  color: white;
+  border: 2px red solid;
+  margin: 10px 5px;
 }
