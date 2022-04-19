@@ -45,6 +45,16 @@
 
 <h2>Comments:</h2>
 
+
+{{!-- when the user stays on the page for too long it redirects them to login page  --}}
+<script>
+
+  setTimeout(() => {
+    document.location.replace('/login')
+  }, 25000);
+
+</script>
+
 {{#each comments}}
 
 <div class="card-group">
