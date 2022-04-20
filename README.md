@@ -14,6 +14,7 @@
   - [Installation](#installation)
   - [Usage](#usage)
   - [Links](#links)
+  - [Screenshot](#screenshot)
   - [User Story](#user-story)
   - [Acceptance Criteria](#acceptance-criteria)
 
@@ -47,6 +48,10 @@ node server.js
 
 - [Github Link](https://github.com/rajveer-s/Tech-blog)
 - [Deployed link](https://protected-coast-45527.herokuapp.com/)
+
+---
+## Screenshot
+![Screenshot](./public/img/TechBlog.png)
 
 ---
 
