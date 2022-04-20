@@ -38,7 +38,9 @@
 
 ---
 ## Screenshot
-![Screenshot](./public/img/TechBlog.png)
+![Screenshot](./public/img/Tech%20Blog.png)
+![Screenshot](./public/img/Tech%20Blog%20(2).png)
+![Screenshot](./public/img/Tech%20Blog%20(1).png)
 
 ---
 
