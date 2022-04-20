@@ -46,6 +46,12 @@ h5.card-title {
   color: white;
 }
 
+.eachpost{
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
 .eachtitle {
   display: flex;
   justify-content: space-between;
