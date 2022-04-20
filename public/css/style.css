@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -9,6 +11,7 @@ body {
   list-style: none;
   background-color: #121313;
   color: white;
+  font-family: 'Inconsolata', monospace;
 }
 
 a {
@@ -220,7 +223,6 @@ label small {
   text-align: center;
   font-style: italic;
   font-size: 4rem;
-  font-weight: 400;
   width: 60vw;
 }
 
@@ -233,7 +235,7 @@ label small {
   margin: 10px 5px;
 }
 
-#pcontent{
+#pcontent {
   line-height: 3rem;
   padding: 2rem;
 }
