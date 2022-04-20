@@ -1,6 +1,6 @@
 <div class="row">
 
-  <h3 id="welcomeText">Welcome {{name}}</h3>
+  <h3 id="welcomeText">(Welcome) => { {{name}} }</h3>
 
   <hr>
 
@@ -15,7 +15,8 @@
       <a href="/dashboard/edit/{{id}}">
         <h5 class="card-title eachtitle" data-dashboard-text="Click here to edit or delete the post">{{p.title}}
           <span>{{format_time
-            date_created}}</span></h5>
+            date_created}}</span>
+        </h5>
       </a>
       <h5 class="card-text" id="pcontent">{{p.content}}</h5>
     </div>
