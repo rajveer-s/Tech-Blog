@@ -13,7 +13,8 @@
   <div class="card">
     <div class="card-body">
       <a href="/dashboard/edit/{{id}}">
-        <h5 class="card-title eachtitle">{{p.title}} <span>{{format_time
+        <h5 class="card-title eachtitle" data-dashboard-text="Click here to edit or delete the post">{{p.title}}
+          <span>{{format_time
             date_created}}</span></h5>
       </a>
       <h5 class="card-text" id="pcontent">{{p.content}}</h5>
