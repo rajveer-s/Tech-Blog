@@ -12,7 +12,6 @@
   - [Description](#description)
   - [Technologies Used](#technologies-used)
   - [Installation](#installation)
-  - [Usage](#usage)
   - [Links](#links)
   - [Screenshot](#screenshot)
   - [User Story](#user-story)
@@ -29,20 +28,8 @@
 - SEQUELIZE
 
 ## Installation:
-### After you have cloned the repository, make sure to run the command line below to get all the dependencies and then make sure to seed the database:
+### This is a webpage. No installtion necessary. Visit this website by clicking on the deployed link.
 
-```
-npm i
-
-npm run seed
-```
-
-## Usage:
-### The application will be invoked by using the following command:
-
-```bash
-node server.js
-```
 ---
 ## Links:
 
