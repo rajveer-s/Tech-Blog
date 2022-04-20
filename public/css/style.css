@@ -232,3 +232,8 @@ label small {
   border: 2px red solid;
   margin: 10px 5px;
 }
+
+#pcontent{
+  line-height: 3rem;
+  padding: 2rem;
+}
