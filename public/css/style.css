@@ -46,27 +46,32 @@ h5.card-title {
   color: white;
 }
 
-.eachpost{
+.eachpost {
   display: flex;
   justify-content: space-between;
   border-radius: 10px;
 }
 
 .eachtitle {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
   border-radius: 10px;
 }
 
+.eachtitle span {
+  text-align: right;
+}
+
 .postedby {
-  display: flex;
-  justify-content: space-between;
+   display: grid;
   border-radius: 10px;
+}
+
+.postedby span {
+  text-align: right;
 }
 
 .postedby:hover {
   font-size: 0;
-  text-align: center;
 }
 
 .postedby:hover::after {
