@@ -35,6 +35,21 @@ h2 {
   color: red;
 }
 
+@media only screen and (max-width: 990px){
+	/*Big smartphones [426px -> 600px]*/
+  .nav-link {
+    margin-top:2rem;
+    width:8em;
+    align-items: center;
+  }
+
+  #navbarSupportedContent{
+    display: grid;
+    justify-content: center;
+  }
+
+}
+
 .card-group {
   padding: 10px 0;
 }
